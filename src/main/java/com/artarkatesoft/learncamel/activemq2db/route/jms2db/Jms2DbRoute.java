@@ -21,6 +21,7 @@ public class Jms2DbRoute extends RouteBuilder {
                 .to("jdbc:myDataSource")
                 .to("sql:select * from messages?dataSource=myDataSource")
                 .to("log:?showBody=true&level=INFO")
-                .to("direct:output");
+//                .to("direct:output")
+        ;
     }
 }

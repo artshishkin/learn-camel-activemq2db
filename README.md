@@ -15,4 +15,9 @@
 
 -  manually create table `messages` using `script.sql`
 
+##### 61 - Build and Run the fully developed app
+
+-  [Running Camel standalone and have it keep running](https://people.apache.org/~dkulp/camel/running-camel-standalone-and-have-it-keep-running.html)
+
+
 
