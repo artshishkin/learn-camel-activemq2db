@@ -8,6 +8,8 @@ public class DBPostgresRoute extends RouteBuilder {
         from("direct:dbInput")
                 .log("Received message is ${body}")
                 .process(new InsertProcessor())
-                .to("jdbc:myDataSource");
+                .to("jdbc:myDataSource")
+                .to("sql:select * from messages?dataSource=myDataSource")
+                .to("log:?showBody=true&level=INFO");
     }
 }

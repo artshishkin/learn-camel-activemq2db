@@ -9,6 +9,8 @@ import org.apache.commons.dbcp2.BasicDataSource;
 import org.junit.jupiter.api.Test;
 
 import javax.sql.DataSource;
+import java.util.ArrayList;
+import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -45,9 +47,15 @@ class DBPostgresRouteTest extends CamelTestSupport {
         String input = "second db input";
 
         //when
-        Object requestBody = template.requestBody("direct:dbInput", input);
+        ArrayList tableRows = template.requestBody("direct:dbInput", input, ArrayList.class);
+
 
         //then
-        System.out.println("requestBody=" + requestBody);
+        assertNotNull(tableRows);
+        assertNotEquals(0, tableRows.size());
+        Map<String, Object> rowElement = (Map<String, Object>) tableRows.get(tableRows.size() - 1);
+        assertNotNull(rowElement);
+        assertNotNull(rowElement.get("id"));
+        assertEquals("1", rowElement.get("id"));
     }
 }
