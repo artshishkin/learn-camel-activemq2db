@@ -15,6 +15,7 @@ public class InsertProcessor implements Processor {
         log.info("Input to be persisted: {}", input);
         //language=SQL
         String insertQuery = "INSERT INTO messages VALUES ('1','" + input + "')";
+//        String insertQuery = "INSERT INTO messages1 VALUES ('1','" + input + "')";
         log.info("Input Query is: {}", insertQuery);
         exchange.getIn().setBody(insertQuery);
     }
