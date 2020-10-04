@@ -7,6 +7,12 @@
 -  [Getting Started](http://activemq.apache.org/getting-started)
 -  `http://127.0.0.1:8161/`
 
-##### 52 - Connect to ActiveMQ using Camel
+##### 53 - Connect to ActiveMQ using Camel
 
 -  `Send to` queue `123` to pass the test
+
+##### 56 - Insert into Posgres DB using Camel
+
+-  manually create table `messages` using `script.sql`
+
+

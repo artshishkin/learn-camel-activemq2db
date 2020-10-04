@@ -1,4 +1,4 @@
-package com.artarkatesoft.learncamel.activemq2db.jms;
+package com.artarkatesoft.learncamel.activemq2db.route.jms;
 
 import org.apache.camel.RoutesBuilder;
 import org.apache.camel.test.junit5.CamelTestSupport;
